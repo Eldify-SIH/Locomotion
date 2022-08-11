@@ -4,14 +4,16 @@
 Servo ServoRightUpper;
 
 Servo ServoRightLower;
+Servo ServoLeftUpper;
 
+Servo ServoLeftLower;
 int ServoRightUpper_pos = 0;
 
 void setup() {
   ServoRightUpper.attach(19);
   ServoRightLower.attach(18);
-  ServoLeftUpper.attach();
-  ServoLeftLower.attach();
+  ServoLeftUpper.attach(17);
+  ServoLeftLower.attach(16);
 
   Serial.begin(9600);
 }
@@ -52,7 +54,7 @@ void loop() {
     delay(10);
   }
 
-  Serial.println("Movement 3 - Servo lower: 80-20");
+  Serial.println("Movement 4 - Servo lower: 80-20");
   delay(10);
 
 
@@ -60,7 +62,7 @@ void loop() {
     ServoRightUpper.write(ServoRightUpper_pos);
     delay(10);
   }
-  Serial.println("Movement 4 - Servo upper: 30-80");
+  Serial.println("Movement 5 - Servo upper: 30-80");
   delay(10);
 
 
@@ -68,7 +70,7 @@ void loop() {
     ServoLeftUpper.write(ServoLeftUpper_pos);
     delay(10);
   }
-  Serial.println("Movement 4 - Servo upper: 100-150");
+  Serial.println("Movement 6 - Servo upper: 100-150");
   delay(10);
 
 
@@ -77,15 +79,15 @@ void loop() {
     delay(10);
   }
 
-  Serial.println("Movement 3 - Servo lower: 20-80");
+  Serial.println("Movement 7 - Servo lower: 20-80");
   delay(10);
 
   for (ServoLeftUpper_pos = 150; ServoLeftUpper_pos >= 100; ServoLeftUpper_pos -= 1) {
     ServoLeftUpper.write(ServoLeftUpper_pos);
     delay(10);
   }
-  Serial.println("Movement 4 - Servo upper: 150-100");
-  delay(3000);
+  Serial.println("Movement 8 - Servo upper: 150-100");
+  delay(10);
 
 
 }
