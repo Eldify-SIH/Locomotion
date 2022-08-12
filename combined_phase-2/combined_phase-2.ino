@@ -49,12 +49,12 @@ void loop() {
   Serial.println("Movement 3 - Servo lower: 160-100");
   delay(10);
 
-  for (ServoLeftLower_pos = 80 ; ServoLeftLower_pos >= 20; ServoLeftLower_pos -= 1) {
+  for (ServoLeftLower_pos = 50 ; ServoLeftLower_pos >= 0; ServoLeftLower_pos -= 1) {
     ServoLeftLower.write(ServoLeftLower_pos );
     delay(10);
   }
 
-  Serial.println("Movement 4 - Servo lower: 80-20");
+  Serial.println("Movement 4 - Servo lower: 50-0");
   delay(10);
 
 
@@ -66,27 +66,27 @@ void loop() {
   delay(10);
 
 
-  for (ServoLeftUpper_pos = 100; ServoLeftUpper_pos <= 150; ServoLeftUpper_pos += 1) {
+  for (ServoLeftUpper_pos = 90; ServoLeftUpper_pos <= 135; ServoLeftUpper_pos += 1) {
     ServoLeftUpper.write(ServoLeftUpper_pos);
     delay(10);
   }
-  Serial.println("Movement 6 - Servo upper: 100-150");
+  Serial.println("Movement 6 - Servo upper: 90-135");
   delay(10);
 
 
-  for (ServoLeftLower_pos = 20 ; ServoLeftLower_pos <= 80; ServoLeftLower_pos += 1) {
+  for (ServoLeftLower_pos = 0 ; ServoLeftLower_pos <= 50; ServoLeftLower_pos += 1) {
     ServoLeftLower.write(ServoLeftLower_pos );
     delay(10);
   }
 
-  Serial.println("Movement 7 - Servo lower: 20-80");
+  Serial.println("Movement 7 - Servo lower:0-50");
   delay(10);
 
-  for (ServoLeftUpper_pos = 150; ServoLeftUpper_pos >= 100; ServoLeftUpper_pos -= 1) {
+  for (ServoLeftUpper_pos = 135; ServoLeftUpper_pos >= 90; ServoLeftUpper_pos -= 1) {
     ServoLeftUpper.write(ServoLeftUpper_pos);
     delay(10);
   }
-  Serial.println("Movement 8 - Servo upper: 150-100");
+  Serial.println("Movement 8 - Servo upper: 135-90");
   delay(10);
 
 
