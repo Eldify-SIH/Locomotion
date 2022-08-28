@@ -19,14 +19,7 @@ Servo Servoback6;
 Servo Servoback7;
 Servo Servoback8;
 
-int min1, max1;
-int min2, max2;
-int min3, max3;
-int min4, max4;
-int min5, max5;
-int min6, max6;
-int min7, max7;
-int min8, max8;
+
 void setup()
 {
   Serial.begin(9600);
@@ -57,7 +50,29 @@ void setup()
 
 void loop()
 {
- 
+  //  forward();
+  ////  standUp();
+  //  delay(500);
+  //  left()  ;
+  //  standUp();
+  //  delay(500);
+//  right();
+sharpLeft();
+  ////  standUp();
+  //  delay(200);
+}
+void standUp()
+{
+  Servofront1.write(80);
+  Servofront2.write(140);
+  Servofront3.write(110);
+  Servofront4.write(40);
+
+  Servoback5.write(40);
+  Servoback6.write(150);
+  Servoback7.write(125);
+  Servoback8.write(40);
+  delay(1000);
 }
 
 void forward() {
@@ -118,15 +133,44 @@ void left() {
   delay(200);
 }
 
-void right(){
-  
-  Servofront2.write(145);
-  Servoback8.write(15);
+void sharpLeft() {
+  Servofront2.write(165);
+  //  Servoback8.write(15);
   delay(70);
-  Servofront1.write(90);
+  Servofront1.write(100);
   Servoback7.write(115);
   delay(70);
   Servofront2.write(140);
+  //  Servoback8.write(40);
+  delay(70);
+  Servoback5.write(30);
+  delay(70);
+  Servofront3.write(120);
+  delay(70);
+//  Servofront4.write(15);
+  Servoback6.write(175);
+  delay(70);
+  Servofront3.write(110);
+  Servoback5.write(40);
+  delay(70);
+//  Servofront4.write(40);
+  Servoback6.write(150);
+  delay(70);
+  Servofront1.write(80);
+  Servoback7.write(120);
+  //    delay(500);
+  delay(200);
+}
+
+void sharpRight() {
+
+  //   Servofront2.write(165);
+  Servoback8.write(15);
+  delay(70);
+  Servofront1.write(100);
+  Servoback7.write(115);
+  delay(70);
+  //  Servofront2.write(140);
   Servoback8.write(40);
   delay(70);
   Servoback5.write(30);
@@ -142,9 +186,42 @@ void right(){
   Servofront4.write(40);
   //  Servoback6.write(150);
   delay(70);
-  Servofront1.write(85);
+  Servofront1.write(80);
   Servoback7.write(125);
   //    delay(500);
   delay(200);
+
+}
+
+
+void right() {
+
+     Servofront2.write(165);
+  Servoback8.write(15);
+  delay(70);
+  Servofront1.write(100);
+  Servoback7.write(115);
+  delay(70);
+    Servofront2.write(140);
+  Servoback8.write(40);
+  delay(70);
+  Servoback5.write(30);
+  delay(70);
+  Servofront3.write(120);
+  delay(70);
+  Servofront4.write(15);
+//  Servoback6.write(175);
+  delay(70);
+  Servofront3.write(110);
+  Servoback5.write(40);
+  delay(70);
+  Servofront4.write(40);
+//  Servoback6.write(165);
+  delay(70);
+  Servofront1.write(90);
+  Servoback7.write(125);
+  //    delay(500);
+  delay(200);
+
 
 }
